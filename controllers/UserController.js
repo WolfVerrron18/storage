@@ -23,8 +23,6 @@ class UserController {
 
       const user = await UserService.users.create(payload)
 
-      console.log(user)
-
       res.status(200).json(user)
     } catch (e) {
       res.status(500).json(e)

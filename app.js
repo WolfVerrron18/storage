@@ -10,13 +10,13 @@ import UserRouter from './routers/UserRouter.js'
 import RoleRouter from './routers/RoleRouter.js'
 
 const app = express()
-const port = 5051
+const port = 3000
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 
-app.use('/api', AuthRouter)
+app.use('/', AuthRouter)
 app.use('/api', UserRouter)
 app.use('/api', RoleRouter)
 
